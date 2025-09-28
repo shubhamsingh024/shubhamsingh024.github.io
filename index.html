@@ -9,70 +9,80 @@
   <!-- AOS Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth; /* smooth scrolling everywhere */
-    }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
   <!-- Navbar -->
-  <header class="flex justify-between items-center px-8 py-4 shadow-md bg-white sticky top-0 z-50">
-    <a href="#home" class="text-2xl font-bold hover:text-blue-600 transition">
-      Shubham Singh
-    </a>
-    <nav class="space-x-6 font-medium">
+  <header class="flex justify-between items-center px-6 md:px-8 py-4 shadow-md bg-white sticky top-0 z-50">
+    <a href="#home" class="text-xl md:text-2xl font-bold hover:text-blue-600 transition">Shubham Singh</a>
+    
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-6 font-medium">
       <a href="#about" class="hover:text-blue-600">About</a>
       <a href="#skills" class="hover:text-blue-600">Skills</a>
       <a href="#certifications" class="hover:text-blue-600">Certifications</a>
       <a href="#projects" class="hover:text-blue-600">Projects</a>
       <a href="#contact" class="hover:text-blue-600">Contact</a>
     </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-2xl focus:outline-none">☰</button>
+    </div>
   </header>
 
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col items-center space-y-4 bg-white shadow-md">
+    <a href="#about" class="hover:text-blue-600 py-2">About</a>
+    <a href="#skills" class="hover:text-blue-600 py-2">Skills</a>
+    <a href="#certifications" class="hover:text-blue-600 py-2">Certifications</a>
+    <a href="#projects" class="hover:text-blue-600 py-2">Projects</a>
+    <a href="#contact" class="hover:text-blue-600 py-2">Contact</a>
+  </div>
+
   <!-- Hero -->
-  <section id="home" class="flex flex-col md:flex-row items-center justify-between px-10 py-20" data-aos="fade-up">
-    <div class="space-y-6 md:w-1/2">
-      <h2 class="text-5xl font-extrabold leading-tight">Hi, I'm <br> Shubham Singh</h2>
-      <p class="text-lg text-gray-600">Data Analyst | Web Developer | UI/UX Enthusiast</p>
+  <section id="home" class="flex flex-col md:flex-row items-center justify-between px-6 md:px-10 py-16 md:py-20" data-aos="fade-up">
+    <div class="space-y-6 md:w-1/2 text-center md:text-left">
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">Hi, I'm <br> Shubham Singh</h2>
+      <p class="text-base md:text-lg text-gray-600">Data Analyst | Web Developer | UI/UX Enthusiast</p>
       <div class="space-x-4">
         <a href="#projects" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">View Projects</a>
         <a href="#contact" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">Contact Me</a>
       </div>
     </div>
     <div class="mt-10 md:mt-0 md:w-1/3" data-aos="fade-left">
-      <img src="your-profile.jpg.png" alt="Profile" class="rounded-2xl shadow-lg">
+      <img src="your-profile.jpg.png" alt="Profile" class="rounded-2xl shadow-lg mx-auto md:mx-0">
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="px-10 py-20 bg-white" data-aos="fade-right">
-  <h3 class="text-3xl font-bold mb-6">About Me</h3>
-  <p class="text-lg text-gray-700 max-w-3xl mb-4">
-    I am a dedicated Information Technology graduate with a strong academic background and a passion for transforming data into actionable insights. 
-    With a Bachelor’s degree and CGPA of 8.98/10, I combine theoretical knowledge with practical experience gained through real-world projects. 
-    I enjoy solving complex problems, designing efficient systems, and creating user-friendly digital experiences. 
-    Over time, I have developed a strong foundation in programming, data analysis, data science and software development, while also exploring creative aspects like UI/UX design. 
-    My goal is to continuously learn, innovate, and contribute to impactful projects that bridge technology and business needs.
-  </p>
-  <blockquote class="text-xl italic text-blue-600 font-medium border-l-4 border-blue-600 pl-4">
-    "Passionate about turning data into meaningful solutions and impactful digital experiences."
-  </blockquote>
+  <section id="about" class="px-6 md:px-10 py-16 md:py-20 bg-white" data-aos="fade-right">
+    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-center md:text-left">About Me</h3>
+    <p class="text-base md:text-lg text-gray-700 max-w-3xl mx-auto md:mx-0 mb-4 leading-relaxed">
+      I am a dedicated Information Technology graduate with a strong academic background and a passion for transforming data into actionable insights. 
+      With a Bachelor’s degree and CGPA of 8.98/10, I combine theoretical knowledge with practical experience gained through real-world projects. 
+      I enjoy solving complex problems, designing efficient systems, and creating user-friendly digital experiences. 
+      Over time, I have developed a strong foundation in programming, data analysis, data science and software development, while also exploring creative aspects like UI/UX design. 
+      My goal is to continuously learn, innovate, and contribute to impactful projects that bridge technology and business needs.
+    </p>
+    <blockquote class="text-lg md:text-xl italic text-blue-600 font-medium border-l-4 border-blue-600 pl-4">
+      "Passionate about turning data into meaningful solutions and impactful digital experiences."
+    </blockquote>
 
-  <div class="grid md:grid-cols-3 gap-6 mt-8">
-    <div class="p-6 bg-gray-50 rounded-xl shadow">📘 <strong>Academic Excellence:</strong> B.Sc. IT with 8.98 CGPA</div>
-    <div class="p-6 bg-gray-50 rounded-xl shadow">🎯 <strong>Career Focus:</strong> Data Analysis, Data Science, Software Development, UI/UX</div>
-    <div class="p-6 bg-gray-50 rounded-xl shadow">💡 <strong>Strengths:</strong> Adaptability, Problem-solving, Teamwork</div>
-  </div>
-</section>
-
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      <div class="p-6 bg-gray-50 rounded-xl shadow text-center md:text-left">📘 <strong>Academic Excellence:</strong> B.Sc. IT with 8.98 CGPA</div>
+      <div class="p-6 bg-gray-50 rounded-xl shadow text-center md:text-left">🎯 <strong>Career Focus:</strong> Data Analysis, Data Science, Software Development, UI/UX</div>
+      <div class="p-6 bg-gray-50 rounded-xl shadow text-center md:text-left">💡 <strong>Strengths:</strong> Adaptability, Problem-solving, Teamwork</div>
+    </div>
+  </section>
 
   <!-- Skills -->
-  <section id="skills" class="px-10 py-20" data-aos="fade-up">
-    <h3 class="text-3xl font-bold mb-10">Skills & Expertise</h3>
-    <div class="grid md:grid-cols-4 gap-6">
-      <!-- Programming -->
-      <div class="p-6 bg-white shadow rounded-xl" data-aos="zoom-in">
+  <section id="skills" class="px-6 md:px-10 py-16 md:py-20" data-aos="fade-up">
+    <h3 class="text-2xl md:text-3xl font-bold mb-10 text-center md:text-left">Skills & Expertise</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 bg-white shadow rounded-xl">
         <h4 class="font-semibold mb-3">Programming</h4>
         <div class="flex flex-wrap gap-2">
           <span class="px-3 py-1 bg-blue-100 rounded">Python</span>
@@ -82,8 +92,7 @@
           <span class="px-3 py-1 bg-blue-100 rounded">PHP</span>
         </div>
       </div>
-      <!-- Databases & Analytics -->
-      <div class="p-6 bg-white shadow rounded-xl" data-aos="zoom-in" data-aos-delay="100">
+      <div class="p-6 bg-white shadow rounded-xl">
         <h4 class="font-semibold mb-3">Databases & Analytics</h4>
         <div class="flex flex-wrap gap-2">
           <span class="px-3 py-1 bg-blue-100 rounded">MySQL</span>
@@ -92,8 +101,7 @@
           <span class="px-3 py-1 bg-blue-100 rounded">Big Data</span>
         </div>
       </div>
-      <!-- Design & UI/UX -->
-      <div class="p-6 bg-white shadow rounded-xl" data-aos="zoom-in" data-aos-delay="200">
+      <div class="p-6 bg-white shadow rounded-xl">
         <h4 class="font-semibold mb-3">Design & UI/UX</h4>
         <div class="flex flex-wrap gap-2">
           <span class="px-3 py-1 bg-blue-100 rounded">Figma</span>
@@ -101,8 +109,7 @@
           <span class="px-3 py-1 bg-blue-100 rounded">Prototyping</span>
         </div>
       </div>
-      <!-- Automation -->
-      <div class="p-6 bg-white shadow rounded-xl" data-aos="zoom-in" data-aos-delay="300">
+      <div class="p-6 bg-white shadow rounded-xl">
         <h4 class="font-semibold mb-3">Automation</h4>
         <div class="flex flex-wrap gap-2">
           <span class="px-3 py-1 bg-blue-100 rounded">UiPath</span>
@@ -113,9 +120,9 @@
   </section>
 
   <!-- Certifications -->
-  <section id="certifications" class="px-10 py-20 bg-white" data-aos="zoom-in">
-    <h3 class="text-3xl font-bold mb-10">Certifications & Training</h3>
-    <div class="grid md:grid-cols-3 gap-6">
+  <section id="certifications" class="px-6 md:px-10 py-16 md:py-20 bg-white" data-aos="zoom-in">
+    <h3 class="text-2xl md:text-3xl font-bold mb-10 text-center md:text-left">Certifications & Training</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <a href="https://www.linkedin.com/posts/shubham-singh-548434249_data-analytics-and-virtual-experience-certificate-activity-7074063780195819520-u94k" target="_blank" class="p-6 bg-gray-50 shadow rounded-xl hover:shadow-lg">📊 Data Analytics (Forage)</a>
       <a href="https://www.linkedin.com/posts/shubham-singh-548434249_1000-free-courses-with-free-certificates-activity-7074419956599169025-Kf8c" target="_blank" class="p-6 bg-gray-50 shadow rounded-xl hover:shadow-lg">💻 C Programming</a>
       <a href="https://www.linkedin.com/posts/shubham-singh-548434249_1000-free-courses-with-free-certificates-activity-7078339482722213888-paFg" target="_blank" class="p-6 bg-gray-50 shadow rounded-xl hover:shadow-lg">🐍 Python Fundamentals</a>
@@ -128,35 +135,30 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="px-10 py-20" data-aos="fade-left">
-    <h3 class="text-3xl font-bold mb-10">Featured Projects</h3>
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- AgriCheck -->
+  <section id="projects" class="px-6 md:px-10 py-16 md:py-20" data-aos="fade-left">
+    <h3 class="text-2xl md:text-3xl font-bold mb-10 text-center md:text-left">Featured Projects</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg">
         <h4 class="font-semibold mb-2">AgriCheck - Smart Agriculture</h4>
         <p class="text-gray-600 text-sm mb-3">IoT-based prototype providing real-time crop suggestions using sensors and ML algorithms.</p>
         <a href="https://github.com/shubhamsingh024/AgriCheck" target="_blank" class="text-blue-600 hover:underline">View Source</a>
       </div>
-      <!-- Getinnn Sports -->
       <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg">
         <h4 class="font-semibold mb-2">Getinnn Sports - Academy Website</h4>
         <p class="text-gray-600 text-sm mb-3">Responsive sports academy site with WhatsApp-enabled contact form.</p>
         <a href="https://shubhamsingh024.github.io/getinnnsports/" target="_blank" class="text-blue-600 hover:underline">View Live</a> |
         <a href="https://github.com/shubhamsingh024/getinnnsports" target="_blank" class="text-blue-600 hover:underline">View Source</a>
       </div>
-      <!-- MoBanking -->
       <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg">
         <h4 class="font-semibold mb-2">MoBanking - Mobile Banking</h4>
         <p class="text-gray-600 text-sm mb-3">Secure mobile banking app interface featuring biometric login and modern UX principles.</p>
         <a href="https://github.com/shubhamsingh024/mobile-banking-app-ui" target="_blank" class="text-blue-600 hover:underline">View Source</a>
       </div>
-      <!-- 8-Bit Resume -->
       <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg">
         <h4 class="font-semibold mb-2">8-Bit Website Resume</h4>
         <p class="text-gray-600 text-sm mb-3">Retro-themed online resume inspired by classic 8-bit aesthetics.</p>
         <a href="https://github.com/shubhamsingh024/8bit-website-resume" target="_blank" class="text-blue-600 hover:underline">View Source</a>
       </div>
-      <!-- Programming Hub -->
       <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg">
         <h4 class="font-semibold mb-2">Programming Hub</h4>
         <p class="text-gray-600 text-sm mb-3">An educational project showcasing multiple coding examples and structured programming tutorials.</p>
@@ -166,9 +168,9 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="px-10 py-20 bg-white" data-aos="fade-up">
-    <h3 class="text-3xl font-bold mb-10">Let's Connect</h3>
-    <div class="grid md:grid-cols-5 gap-6">
+  <section id="contact" class="px-6 md:px-10 py-16 md:py-20 bg-white" data-aos="fade-up">
+    <h3 class="text-2xl md:text-3xl font-bold mb-10 text-center md:text-left">Let's Connect</h3>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
       <a href="mailto:shubhamsingh24305@gmail.com" class="flex flex-col items-center p-6 bg-gray-50 shadow rounded-xl hover:shadow-lg"><i class="ri-mail-line text-3xl text-blue-600 mb-2"></i>Email</a>
       <a href="https://linkedin.com/in/shubham-singh-548434249" class="flex flex-col items-center p-6 bg-gray-50 shadow rounded-xl hover:shadow-lg"><i class="ri-linkedin-box-fill text-3xl text-blue-600 mb-2"></i>LinkedIn</a>
       <a href="https://github.com/shubhamsingh024" class="flex flex-col items-center p-6 bg-gray-50 shadow rounded-xl hover:shadow-lg"><i class="ri-github-fill text-3xl text-blue-600 mb-2"></i>GitHub</a>
@@ -178,18 +180,46 @@
   </section>
 
   <!-- Footer -->
-  <footer class="px-10 py-6 bg-gray-900 text-gray-300 text-center">
-    <p>© 2025 Shubham Singh </p>
+  <footer class="px-6 md:px-10 py-6 bg-gray-900 text-gray-300 text-center">
+    <p>© 2025 Shubham Singh</p>
   </footer>
 
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
+<script>
+  AOS.init({ duration: 1000, once: true });
 
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  let menuOpen = false;
+
+  // Toggle mobile menu
+  menuBtn.addEventListener("click", () => {
+    if (!menuOpen) {
+      mobileMenu.classList.remove("max-h-0");
+      mobileMenu.classList.add("max-h-screen");
+      menuOpen = true;
+    } else {
+      mobileMenu.classList.remove("max-h-screen");
+      mobileMenu.classList.add("max-h-0");
+      menuOpen = false;
+    }
+  });
+
+  // Close menu + smooth scroll when clicking links
+  const menuLinks = mobileMenu.querySelectorAll("a");
+  menuLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href").substring(1);
+      document.getElementById(targetId).scrollIntoView({ behavior: "smooth", block: "start" });
+
+      // Close menu & reset
+      mobileMenu.classList.remove("max-h-screen");
+      mobileMenu.classList.add("max-h-0");
+      menuOpen = false;
+    });
+  });
+</script>
 </body>
 </html>
